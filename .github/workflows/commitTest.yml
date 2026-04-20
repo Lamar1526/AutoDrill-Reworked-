@@ -28,6 +28,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create GitHub Release with jar
-        run: gh release create v157.3 build/libs/AutoDrillDesktop.jar --title "AutoDrill v157.3" --notes "Updated for Mindustry v157.3" --latest
+        run: gh release create v157.3 build/libs/*Desktop.jar --title "AutoDrill Reworked v157.3" --notes "Updated for Mindustry v157.3" --latest
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
