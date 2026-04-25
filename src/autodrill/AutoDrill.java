@@ -65,13 +65,13 @@ public class AutoDrill extends Mod {
 
             float maxWidth = Math.max(Core.scene.getWidth() * 0.5f, Math.min(1000, Core.scene.getWidth()));
 
-            t.image(new TextureRegionDrawable(Core.atlas.find("tutorial"))).maxWidth(maxWidth).scaling(Scaling.fit).padTop(10).get().setWidth(maxWidth);
+            t.image(new TextureRegionDrawable(Core.atlas.find("auto-drill-tutorial"))).maxWidth(maxWidth).scaling(Scaling.fit).padTop(10).get().setWidth(maxWidth);
             t.row();
             t.labelWrap(bundle.get("tutorial2-text")).growX().fillX().padTop(10).row();
-            t.image(new TextureRegionDrawable(Core.atlas.find("tutorial2"))).maxWidth(maxWidth).scaling(Scaling.fit).padTop(10).get().setWidth(maxWidth);
+            t.image(new TextureRegionDrawable(Core.atlas.find("auto-drill-tutorial2"))).maxWidth(maxWidth).scaling(Scaling.fit).padTop(10).get().setWidth(maxWidth);
             t.row();
             t.labelWrap(bundle.get("settings-text")).growX().fillX().padTop(10).row();
-            t.image(new TextureRegionDrawable(Core.atlas.find("settings"))).maxWidth(maxWidth).scaling(Scaling.fit).padTop(10).get().setWidth(maxWidth);
+            t.image(new TextureRegionDrawable(Core.atlas.find("auto-drill-settings"))).maxWidth(maxWidth).scaling(Scaling.fit).padTop(10).get().setWidth(maxWidth);
             t.row();
             t.labelWrap(bundle.get("auto-drill-conclusion-text")).growX().fillX().padTop(10).row();
 
@@ -124,7 +124,7 @@ public class AutoDrill extends Mod {
 
             settingsTable.add(settings);
         };
-        ui.settings.getCategories().add(new SettingsMenuDialog.SettingsCategory(bundle.get("auto-drill.settings.title"), new TextureRegionDrawable(Core.atlas.find("logo")), builder));
+        ui.settings.getCategories().add(new SettingsMenuDialog.SettingsCategory(bundle.get("auto-drill.settings.title"), new TextureRegionDrawable(Core.atlas.find("auto-drill-logo")), builder));
 
         // Activation
         Core.scene.addListener(new InputListener() {
@@ -166,7 +166,7 @@ public class AutoDrill extends Mod {
         });
 
         ui.hudGroup.fill(t -> {
-            enableButton = t.button(new TextureRegionDrawable(Core.atlas.find("logo")), Styles.emptyTogglei, () -> {
+            enableButton = t.button(new TextureRegionDrawable(Core.atlas.find("auto-drill-logo")), Styles.emptyTogglei, () -> {
                 enabled = !enabled;
                 selectTable.visible = false;
                 directionTable.visible = false;
