@@ -1,48 +1,24 @@
 # AutoDrill Reworked
 
-[![GitHub all releases](https://img.shields.io/github/downloads/Daniil15DDD/AutoDrill-Reworked/total)](https://github.com/Daniil15DDD/AutoDrill-Reworked/releases)
-[![GitHub Repo stars](https://img.shields.io/github/stars/Daniil15DDD/AutoDrill-Reworked?style=social)](https://github.com/Daniil15DDD/AutoDrill-Reworked)
+Mindustry Mod which adds tools to automatically fill a resource patch with drills. Fork of [AutoDrill by Pointifix](https://github.com/Pointifix/AutoDrill), updated for Mindustry v8 build 157.3.
 
-Mindustry Mod which adds tools to automatically fill a resource patch with drills.
+## How to Use
 
-Fork of [AutoDrill by Pointifix](https://github.com/Pointifix/AutoDrill), updated for Mindustry v8 build 157.3.
+Enable the mod by the activation key (default `H`) or by clicking the activation button next to the minimap. When activated, clicking on any tile will display a toolbar with the drills the current tile can be mined with.
 
-Enable the mod by the activation key (default `H`) or by clicking the activation button next to the minimap. When activated, clicking on any tile will display a toolbar with the drills the current tile can be mined with. The mechanical drill and pneumatic drill buttons fill the resource patch with drills, and a bridge layout facing in the picked direction.
+- The **mechanical drill** and **pneumatic drill** buttons fill the resource patch with drills, and a bridge layout facing in the picked direction.
+- The **laser** and **airblast drill** buttons fill the resource patch with drills and place water extractors and power nodes adjacent to each drill if possible.
+- On **Erekir**, the mod enables you to automatically fill wall resources.
 
-![](showcase/bridge-drill.gif)
+## Configuration
 
-The laser and airblast drill buttons fill the resource patch with drills and places water extractors and power node adjacent to each drill if possible.
+- **Activation Key** — The key used to toggle the mod
+- **Display Toggle Button** — Whether to show the toggle button next to the minimap
+- **Max Tiles** — Maximum number of tiles flood-filled with drills (affects performance)
+- **Minimum Ores** — Minimum number of resource tiles any drill must cover
+- **Optimization Quality** — How thoroughly the drill placement is optimised (higher = better results, slower)
+- **Place Water Extractors and Power Nodes** — Whether to place water extractors and power nodes next to drills
 
-![](showcase/optimization-drill.gif)
+---
 
-For Erekir the mod enables you to automatically fill wall resources
-
-![](showcase/wall-drill.gif)
-
-The mod has several configuration options.
-
-- **Activation Key**
-
-  The key with which the mod is toggled
-
-- **Display Toggle Button**
-
-  Whether to display the toggle button
-
-- **Max Tiles**
-
-  The maximum number of tiles that are flood filled and later filled with drills, highly effects performance
-
-- **Minimum Ores**
-
-  The minimum amount of resource tiles any drill must cover
-
-- **Optimization Quality**
-
-  The optimization algorithm for filling an area with drills iterates the whole possibility space, starting with tiles which yield the highest mining rate. The optimization quality parameter determines how early this search is terminated. Increasing this number may produce better results in trade of computation speed.
-
-- **Place Water Extractors and Power Nodes**
-
-  Whether to place water extractors and power nodes next to the drills
-
-![](showcase/settings.png)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/autzq)
