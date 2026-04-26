@@ -13,21 +13,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
-          distribution: temurin
-      - name: Build mod jar
-        run: |
-          chmod +x ./gradlew
-          ./gradlew jar
-      - name: Delete old release if exists
-        run: gh release delete v157.3 --yes || true
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Create GitHub Release with jar
-        run: gh release create v157.3 build/libs/*Desktop.jar --title "AutoDrill Reworked v157.3" --notes "Updated for Mindustry v157.3" --latest
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v3
+
+    - name: Resize icon to 256x256
+      run: |
+        sudo apt-get install -y imagemagick
+        convert icon.png -resize 256x256 icon.png
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: 17
+        distribution: temurin
+
+    - name: Build mod jar
+      run: |
+        chmod +x ./gradlew
+        ./gradlew jar
+
+    - name: Delete old release if exists
+      run: gh release delete v157.3 --yes || true
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create GitHub Release with jar
+      run: gh release create v157.3 build/libs/*Desktop.jar --title "AutoDrill Reworked v157.3" --notes "Updated for Mindustry v157.3" --latest
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
