@@ -1,5 +1,7 @@
 # AutoDrill Reworked
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/autzq)
+
 Mindustry Mod which adds tools to automatically fill a resource patch with drills. Fork of [AutoDrill by Pointifix](https://github.com/Pointifix/AutoDrill), updated for Mindustry v8 build 157.3.
 
 ## How to Use
@@ -18,7 +20,3 @@ Enable the mod by the activation key (default `H`) or by clicking the activation
 - **Minimum Ores** — Minimum number of resource tiles any drill must cover
 - **Optimization Quality** — How thoroughly the drill placement is optimised (higher = better results, slower)
 - **Place Water Extractors and Power Nodes** — Whether to place water extractors and power nodes next to drills
-
----
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/autzq)
