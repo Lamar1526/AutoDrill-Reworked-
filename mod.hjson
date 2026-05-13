@@ -1,8 +1,11 @@
-displayName: "AutoDrill Reworked"
-name: "autodrill"
-author: "Pointifix, Daniil15DDD"
-main: "autodrill.AutoDrill"
-description: "Mindustry mod that adds tools for automatically filling resource patches with drills. Fork updated for Mindustry v8 build 157.3."
-version: "1.5.1-157.3"
-minGameVersion: "157"
-java: true
+{
+  "displayName": "AutoDrill Reworked",
+  "name": "autodrill",
+  "author": "Pointifix, Daniil15DDD",
+  "main": "autodrill.AutoDrill",
+  "description": "Mindustry mod that adds tools for automatically filling resource patches with drills. Fork updated for Mindustry v8 build 157.3.",
+  "version": "1.5.1-157.3",
+  "minGameVersion": "157",
+  "java": true,
+  "hidden": true
+}
