@@ -7,39 +7,19 @@ version = '1.0'
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_1_8
 
-sourceSets.main.java.srcDirs = ["src"]
-
 repositories {
     mavenCentral()
-    maven { url "https://raw.githubusercontent.com/Zelaux/MindustryRepo/master/repository" }
     maven { url "https://www.jitpack.io" }
 }
 
-ext {
-    mindustryVersion = 'v157.5'
-    jabelVersion = "93fde537c7"
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs.addAll(['--release', '8'])
-}
-
 dependencies {
-    implementation 'org.jetbrains:annotations:20.1.0'
-    compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
-    compileOnly "com.github.Anuken.Mindustry:core:$mindustryVersion"
-    annotationProcessor "com.github.Anuken:jabel:$jabelVersion"
+    compileOnly "com.github.Anuken.Arc:arc-core:v157.5"
+    compileOnly "com.github.Anuken.Mindustry:core:v157.5"
 }
 
 jar {
-    archiveFileName = "${project.name}Desktop.jar"
-
     from(rootDir) {
         include "mod.hjson"
         include "icon.png"
-    }
-
-    from("assets/") {
-        include "**"
     }
 }
